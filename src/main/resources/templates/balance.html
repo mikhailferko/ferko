@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div>Остаток товаров</div>
+<form method="post">
+    <input type="text" name="filter"/>
+    <button type="submit">Найти</button>
+</form>
+    <div th:each="prod : ${products}">
+        <span th:text="${prod.article}"/>
+        <span th:text="${prod.name}"/>
+        <span th:text="${prod.balance}"/>
+    </div>
+</body>
+</html>

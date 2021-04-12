@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div>Список товаров</div>
+<form method="post">
+    <input type="text" name="filter"/>
+    <button type="submit">Найти</button>
+</form>
+    <div th:each="prod : ${products}">
+        <span th:text="${prod.article}"/>
+        <span th:text="${prod.name}"/>
+        <span th:text="${prod.lastSalePrice}"/>
+        <span th:text="${prod.lastBuyPrice}"/>
+    </div>
+</body>
+</html>
